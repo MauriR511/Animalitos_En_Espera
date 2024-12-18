@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.rosales.adoptame.ui.login.LoginViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EEEEEE">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/app_logo"
+            android:layout_width="180dp"
+            android:layout_height="171dp"
+            android:layout_marginTop="55dp"
+            android:background="#FFFFFF"
+            android:scaleType="centerInside"
+            android:src="@drawable/logo_dog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_border_color="#FFFFFF"
+            app:riv_border_width="1dip"
+            app:riv_corner_radius="20dp"
+            app:riv_mutate_background="true"
+            app:riv_tile_mode="clamp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/usernameTextField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_gap"
+            android:layout_marginTop="55dp"
+            android:layout_marginEnd="@dimen/default_gap"
+            android:hint="username"
+            app:layout_constraintEnd_toEndOf="@+id/app_logo"
+            app:layout_constraintStart_toStartOf="@+id/app_logo"
+            app:layout_constraintTop_toBottomOf="@+id/app_logo">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={viewModel.userField}"
+                android:visibility="visible" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordTextField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_gap"
+            android:layout_marginTop="@dimen/default_gap"
+            android:layout_marginEnd="@dimen/default_gap"
+            android:hint="password"
+            app:layout_constraintEnd_toEndOf="@+id/usernameTextField"
+            app:layout_constraintStart_toStartOf="@+id/usernameTextField"
+            app:layout_constraintTop_toBottomOf="@+id/usernameTextField">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:password="true"
+                android:text="@={viewModel.passwordField}" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/buttonSignIn"
+            style="@style/ShapeAppearance.App.SmallComponent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_gap"
+            android:layout_marginTop="55dp"
+            android:layout_marginEnd="@dimen/default_gap"
+            android:background="#041562"
+            android:onClick="@{()-> viewModel.onLogin()}"
+            android:text="Sign In"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="@+id/passwordTextField"
+            app:layout_constraintStart_toStartOf="@+id/passwordTextField"
+            app:layout_constraintTop_toBottomOf="@+id/passwordTextField" />
+
+        <TextView
+            android:id="@+id/newUser"
+            android:layout_width="76dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="108dp"
+            android:text="New User?"
+            android:textColor="#444444"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/buttonSignIn"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="@+id/buttonSignIn"
+            app:layout_constraintTop_toBottomOf="@+id/buttonSignIn" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="70dp"
+            android:text="Having trouble with your account"
+            android:textColor="#444444"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/buttonSignIn"
+            app:layout_constraintStart_toStartOf="@+id/buttonSignIn"
+            app:layout_constraintTop_toBottomOf="@+id/newUser"
+            app:layout_constraintVertical_bias="0.282" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="40dp"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="@+id/newUser"
+            app:layout_constraintStart_toStartOf="@+id/newUser"
+            app:layout_constraintTop_toBottomOf="@+id/newUser" />
+
+        <TextView
+            android:id="@+id/signUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="158dp"
+            android:onClick="presionaBoton"
+            android:text="SIGN UP"
+            android:textColor="#50A8FE"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/newUser"
+            app:layout_constraintStart_toEndOf="@+id/newUser"
+            app:layout_constraintTop_toTopOf="@+id/buttonSignIn" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

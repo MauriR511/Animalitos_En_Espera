@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#22577E">
+
+    <ScrollView
+        android:layout_width="440dp"
+        android:layout_height="830dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.372">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout6"
+            android:layout_width="408dp"
+            android:layout_height="840dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/background_box"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.333"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="361dp"
+                android:layout_height="372dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/boxerdog"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="344dp"
+                android:layout_height="716dp"
+                android:layout_marginTop="180dp"
+                android:background="@drawable/background_box"
+                android:backgroundTint="#FFFFFF"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0">
+
+                <TextView
+                    android:id="@+id/quienSoy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="¿Quien soy?"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.128"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/petInfoName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.194"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/quienSoy"
+                    tools:text="name" />
+
+                <TextView
+                    android:id="@+id/petInfoAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.184"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/petInfoName"
+                    tools:text="age" />
+
+                <TextView
+                    android:id="@+id/petInfoAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.204"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/petInfoAge"
+                    tools:text="address" />
+
+                <TextView
+                    android:id="@+id/comoSoy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="¿Como soy?"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.129"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/petInfoAddress" />
+
+                <TextView
+                    android:id="@+id/petInfoPersonality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.22"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/comoSoy"
+                    tools:text="Personality" />
+
+                <TextView
+                    android:id="@+id/miHistoria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="¿Mi Historia?"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.132"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/petInfoPersonality" />
+
+                <TextView
+                    android:id="@+id/petInfoHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.197"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/miHistoria"
+                    tools:text="History" />
+
+                <TextView
+                    android:id="@+id/datosMi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Datos sobre mi"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.139"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/petInfoHistory" />
+
+                <TextView
+                    android:id="@+id/petInfoSpecies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.222"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/datosMi"
+                    tools:text="Specie" />
+
+                <TextView
+                    android:id="@+id/petInfoSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.211"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/petInfoSpecies"
+                    tools:text="Size" />
+
+                <TextView
+                    android:id="@+id/petInfoWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.22"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/petInfoSize"
+                    tools:text="Weight" />
+
+                <TextView
+                    android:id="@+id/petInfoGender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.218"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/petInfoWeight"
+                    tools:text="Gender" />
+
+                <TextView
+                    android:id="@+id/petInfoBirthDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/petInfoGender"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.707"
+                    app:layout_constraintStart_toEndOf="@+id/petInfoGender"
+                    app:layout_constraintTop_toTopOf="@+id/petInfoGender"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:text="BirthDate" />
+
+                <TextView
+                    android:id="@+id/MisProtecciones"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:text="Mis Protecciones"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.148"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/petInfoBirthDate" />
+
+                <TextView
+                    android:id="@+id/petInfoVaccine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.274"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/MisProtecciones"
+                    tools:text="Vaccine" />
+
+                <TextView
+                    android:id="@+id/Requisitos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Requisitos para adoptarme"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.201"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/petInfoVaccine" />
+
+                <TextView
+                    android:id="@+id/petInfoRequirements"
+                    android:layout_width="222dp"
+                    android:layout_height="34dp"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.56"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Requisitos"
+                    tools:text="Requirements" />
+
+                <Button
+                    android:id="@+id/adopt"
+                    android:layout_width="329dp"
+                    android:layout_height="37dp"
+                    android:layout_marginBottom="84dp"
+                    android:text="Adoptame"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView12"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/perro"
+                    app:layout_constraintBottom_toBottomOf="@+id/petInfoName"
+                    app:layout_constraintEnd_toStartOf="@+id/petInfoName"
+                    app:layout_constraintHorizontal_bias="0.457"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="24dp"
+                    android:layout_height="27dp"
+                    android:src="@drawable/circularline"
+                    app:layout_constraintBottom_toBottomOf="@+id/petInfoAge"
+                    app:layout_constraintEnd_toStartOf="@+id/petInfoAge"
+                    app:layout_constraintHorizontal_bias="0.47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView12"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <ImageView
+                    android:id="@+id/imageView14"
+                    android:layout_width="24dp"
+                    android:layout_height="27dp"
+                    android:src="@drawable/placeholder"
+                    app:layout_constraintBottom_toBottomOf="@+id/petInfoAddress"
+                    app:layout_constraintEnd_toStartOf="@+id/petInfoAddress"
+                    app:layout_constraintHorizontal_bias="0.457"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView13"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <ImageView
+                    android:id="@+id/imageView15"
+                    android:layout_width="24dp"
+                    android:layout_height="27dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/raaza"
+                    app:layout_constraintBottom_toBottomOf="@+id/petInfoSpecies"
+                    app:layout_constraintEnd_toStartOf="@+id/petInfoSpecies"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/petInfoSpecies" />
+
+                <ImageView
+                    android:id="@+id/imageView16"
+                    android:layout_width="24dp"
+                    android:layout_height="27dp"
+                    android:src="@drawable/pawprints"
+                    app:layout_constraintBottom_toBottomOf="@+id/petInfoSize"
+                    app:layout_constraintEnd_toStartOf="@+id/petInfoSize"
+                    app:layout_constraintHorizontal_bias="0.69"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView15"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <ImageView
+                    android:id="@+id/imageView17"
+                    android:layout_width="24dp"
+                    android:layout_height="27dp"
+                    android:src="@drawable/kg"
+                    app:layout_constraintBottom_toBottomOf="@+id/petInfoWeight"
+                    app:layout_constraintEnd_toStartOf="@+id/petInfoWeight"
+                    app:layout_constraintHorizontal_bias="0.707"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView16"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <ImageView
+                    android:id="@+id/imageView18"
+                    android:layout_width="24dp"
+                    android:layout_height="27dp"
+                    android:src="@drawable/gender"
+                    app:layout_constraintBottom_toBottomOf="@+id/petInfoGender"
+                    app:layout_constraintEnd_toStartOf="@+id/petInfoGender"
+                    app:layout_constraintHorizontal_bias="0.725"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView17"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <ImageView
+                    android:id="@+id/imageView19"
+                    android:layout_width="24dp"
+                    android:layout_height="27dp"
+                    android:src="@drawable/birthday_cake"
+                    app:layout_constraintBottom_toBottomOf="@+id/petInfoBirthDate"
+                    app:layout_constraintEnd_toStartOf="@+id/petInfoBirthDate"
+                    app:layout_constraintHorizontal_bias="0.823"
+                    app:layout_constraintStart_toEndOf="@+id/petInfoGender"
+                    app:layout_constraintTop_toTopOf="@+id/petInfoBirthDate"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <ImageView
+                    android:id="@+id/imageView20"
+                    android:layout_width="24dp"
+                    android:layout_height="27dp"
+                    android:layout_marginStart="12dp"
+                    android:src="@drawable/vacunas"
+                    app:layout_constraintBottom_toBottomOf="@+id/MisProtecciones"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.012"
+                    app:layout_constraintStart_toEndOf="@+id/MisProtecciones"
+                    app:layout_constraintTop_toTopOf="@+id/MisProtecciones"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <ImageView
+                    android:id="@+id/imageView21"
+                    android:layout_width="24dp"
+                    android:layout_height="27dp"
+                    android:src="@drawable/doghouse"
+                    app:layout_constraintBottom_toBottomOf="@+id/Requisitos"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.216"
+                    app:layout_constraintStart_toEndOf="@+id/Requisitos"
+                    app:layout_constraintTop_toTopOf="@+id/Requisitos" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

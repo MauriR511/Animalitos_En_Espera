@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host_fragment"
+    app:startDestination="@id/petMainActivity">
+    <fragment
+        android:id="@+id/petMainActivity"
+        android:name="com.rosales.adoptame.PetMainActivity"
+        android:label="PetMainActivity" >
+        <action
+            android:id="@+id/action_petMainActivity_to_petCardListFragment1"
+            app:destination="@id/petCardListFragment1" />
+        <action
+            android:id="@+id/action_petMainActivity_to_serviceCardListFragment"
+            app:destination="@id/serviceCardListFragment" />
+        <action
+            android:id="@+id/action_petMainActivity_to_shelterCardListFragment"
+            app:destination="@id/shelterCardListFragment" />
+        <action
+            android:id="@+id/action_petMainActivity_to_petPostFragment"
+            app:destination="@id/petPostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/petCardListFragment1"
+        android:name="com.rosales.adoptame.ui.petcard.PetCardListFragment"
+        android:label="PetCardListFragment" >
+        <action
+            android:id="@+id/action_petCardListFragment1_to_petMainActivity"
+            app:destination="@id/petMainActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/shelterCardListFragment"
+        android:name="com.rosales.adoptame.ui.sheltercard.ShelterCardListFragment"
+        android:label="ShelterCardListFragment" >
+        <action
+            android:id="@+id/action_shelterCardListFragment_to_petMainActivity"
+            app:destination="@id/petMainActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/serviceCardListFragment"
+        android:name="com.rosales.adoptame.ui.servicecard.ServiceCardListFragment"
+        android:label="ServiceCardListFragment" >
+        <action
+            android:id="@+id/action_serviceCardListFragment_to_petMainActivity"
+            app:destination="@id/petMainActivity" />
+        <action
+            android:id="@+id/action_serviceCardListFragment_to_petProfileFragment"
+            app:destination="@id/petProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/petProfileFragment"
+        android:name="com.rosales.adoptame.ui.petcard.PetProfileFragment"
+        android:label="PetProfileFragment" />
+    <activity
+        android:id="@+id/petPostFragment"
+        android:name="com.rosales.adoptame.ui.petPost.PetPostFragment"
+        android:label="PetPostFragment" />
+
+</navigation>
